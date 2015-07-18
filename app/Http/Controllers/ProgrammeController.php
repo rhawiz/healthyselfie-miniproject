@@ -41,9 +41,7 @@ class ProgrammeController extends Controller
      */
     public function store(Request $request)
     {
-        $input = Request::all();
-		
-		
+		$input = Request::all();
 		$programme = new \App\Programme;
 		$programme->name = $input['q1'];
 		$programme->price_usd = (float) $input['q2'];
@@ -54,7 +52,9 @@ class ProgrammeController extends Controller
 		
 		$programme->save();
 		
-		return $programme;
+				
+		return view('programmes.index');
+
     }
 
     /**

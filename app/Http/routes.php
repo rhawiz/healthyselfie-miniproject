@@ -15,11 +15,11 @@
 
 
 
-Route::get('programme', 'ProgrammeController@index');
+Route::get('programme/create', 'ProgrammeController@index');
 
-Route::post('programme', 'ProgrammeController@store');
+Route::post('programme/create', 'ProgrammeController@store');
 
-Route::get('programme/create','ProgrammeController@create');
+Route::get('programme/show','ProgrammeController@show');
 
 Route::get('/', function () {
      return view('welcome');

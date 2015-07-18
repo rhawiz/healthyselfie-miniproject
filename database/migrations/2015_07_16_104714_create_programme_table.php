@@ -15,7 +15,7 @@ class CreateProgrammeTable extends Migration
         Schema::create('programme', function (Blueprint $table) {
             $table->increments('id');
 			$table->string('name');
-			$table->double('price_usd')->unique();
+			$table->double('price_usd');
 			$table->string('gender');
 			$table->integer('weeks');
 			$table->integer('training_days');
